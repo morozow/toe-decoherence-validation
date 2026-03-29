@@ -1,4 +1,4 @@
-# Scale-Dependent Prediction for the Inflationary Consistency Relation from Decoherence-Induced Occupancy
+# Scale-Dependent Data-Conditioned Inference for the Inflationary Consistency Relation from Decoherence-Induced Occupancy
 
 **Author:** Raman Marozau · [ORCID: 0009-0000-0241-1135](https://orcid.org/0009-0000-0241-1135) · Independent Researcher
 
@@ -8,13 +8,13 @@
 
 ## Abstract
 
-We show that a single Mukhanov–Sasaki/Bogoliubov computation, applied to the Theory of Everything (ToE) decoherence mechanism, simultaneously yields three linked predictions from one parameter set: (i) an infrared consistency-ratio deviation $Q(k) = c_s^\ast/(1+2\bar{n}_k) < 1$ at scales $k \lesssim k_0$, with mean IR deviation 6–70% depending on $k_0$ (peak deviation up to 97% at the lowest $k$); (ii) ring-down oscillations in the scalar power spectrum with phase-stable behavior in the amplitude-relevant region (serving as an internal consistency check); and (iii) non-Gaussianity suppression by the same occupancy factor ($R_{f_{NL}}(k) = Q(k)$). The standard inflationary limit $Q = 1$ is recovered at the pivot scale $k = 0.05$ Mpc$^{-1}$ as a null test. Using public BICEP/Keck 2018 + Planck 2018 + BAO chains (1,948,224 samples, $r = 0.0163 \pm 0.0101$), we demonstrate that 75 out of 125 parameter combinations (60%) satisfy all three channels simultaneously, including the manuscript reference point ($k_0 = 0.002$, $\varepsilon_H = 0.01$, $\Gamma/H = 5$). This is a robust prediction within the tested domain, not a detection, and is falsifiable with future low-$\ell$ B-mode constraints on independently measured $n_t$.
+We show that a single Mukhanov–Sasaki/Bogoliubov computation, applied to the Theory of Everything (ToE) decoherence mechanism, simultaneously yields three linked data-conditioned inferences from one parameter set: (i) an infrared consistency-ratio deviation $Q(k) = c_s^\ast/(1+2\bar{n}_k) < 1$ at scales $k \lesssim k_0$, with mean IR deviation 6–70% depending on $k_0$ (peak deviation up to 97% at the lowest $k$); (ii) ring-down oscillations in the scalar power spectrum with phase-stable behavior in the amplitude-relevant region (serving as an internal consistency check); and (iii) non-Gaussianity suppression by the same occupancy factor ($R_{f_{NL}}(k) = Q(k)$). The standard inflationary limit $Q = 1$ is recovered at the pivot scale $k = 0.05$ Mpc$^{-1}$ as a null test. Using public BICEP/Keck 2018 + Planck 2018 + BAO chains (1,948,224 samples, $r = 0.0163 \pm 0.0101$), we demonstrate that 75 out of 125 parameter combinations (60%) satisfy all three channels simultaneously, including the manuscript reference point ($k_0 = 0.002$, $\varepsilon_H = 0.01$, $\Gamma/H = 5$). This is a robust data-conditioned inference within the tested domain, not a detection, and is testable with future low-$\ell$ B-mode constraints on independently measured $n_t$.
 
 ---
 
 ## 1. The Claim
 
-In the tested ToE parameter domain ($k_0 \geq 0.002$ Mpc$^{-1}$, $\varepsilon_H = 0.001$–$0.05$, $\Gamma/H = 1$–$20$), a single Mukhanov–Sasaki/Bogoliubov computation simultaneously yields three linked predictions from one parameter set:
+In the tested ToE parameter domain ($k_0 \geq 0.002$ Mpc$^{-1}$, $\varepsilon_H = 0.001$–$0.05$, $\Gamma/H = 1$–$20$), a single Mukhanov–Sasaki/Bogoliubov computation simultaneously yields three linked data-conditioned inferences from one parameter set:
 
 (i) An IR consistency-ratio deviation $Q(k) < 1$ (~6%–70%, scale-dependent);
 
@@ -183,7 +183,7 @@ $k_0$ determines the scale and amplitude of the ToE effect:
 | 0.005 | 79.7% | 41.8% |
 | 0.01 | 96.9% | 70.8% |
 
-The ToE prediction is a **family of predictions parameterized by $k_0$**. Constraining $k_0$ from data is the key next step.
+The ToE-implied deviation is a **family of curves parameterized by $k_0$**. Constraining $k_0$ from data is the key next step.
 
 ### 7.4 Quasi-Invariant $Q(k_0) \approx 0.94$
 
@@ -198,20 +198,20 @@ At $k = k_0$ (the decoherence scale), $Q(k_0) \approx 0.94$ across all tested $\
 The ToE receives support if, in an analysis with free $n_t$ and low-$\ell$ B-mode data:
 
 1. The posterior prefers $Q(k) < 1$ at $k \lesssim k_0$ with $> 3\sigma$ significance;
-2. The scale dependence matches the predicted form (stronger in IR, vanishing at pivot);
+2. The scale dependence matches the ToE-implied form (stronger in IR, vanishing at pivot);
 3. The three channels ($Q$, ring-down, $f_{NL}$) are jointly consistent from one parameter set.
 
 ### 8.2 Refutation
 
 The ToE is refuted if data with free $n_t$ yield:
 
-1. $Q(k) = 1$ at low $k$ within errors incompatible with the predicted 6–70%;
+1. $Q(k) = 1$ at low $k$ within errors incompatible with the ToE-implied 6–70%;
 2. No scale-dependent enhancement toward the IR;
 3. Robustness under marginalization over ToE parameters.
 
 ### 8.3 Inconclusive
 
-If uncertainties on $n_t$ at low $k$ exceed the predicted $\Delta n_t$, the result is non-discriminating.
+If uncertainties on $n_t$ at low $k$ exceed the ToE-implied $\Delta n_t$, the result is non-discriminating.
 
 ---
 
