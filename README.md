@@ -108,19 +108,16 @@ python -m toe_decoherence_validation.joint_analysis
 ## Repository Structure
 
 ```
-toe_error_evaluation/
-├── __init__.py
-├── toe_theory.py            # Theory class (imports MS solver from toe_mcmc_physical)
-├── run_mcmc.py              # MCMC with free n_t (Cobaya)
-├── analyze.py               # Chain post-processing and verdict
-├── evaluate_bk18.py         # Single-point BK18 evaluation
-├── evaluate_bk18_map.py     # Sensitivity map (k0 × eps_H scan)
-├── joint_analysis.py        # Three-channel joint feasibility
-├── EVALUATION_REPORT.md     # Detailed evaluation report
-├── ONE_CLAIM_PAPER.md       # One-claim paper
-├── DISCOVERY_DIALOGUE.md    # Research dialogue log
-├── README.md                # This file
-└── plots/
+src/toe_decoherence_validation
+    ├── __init__.py
+    ├── toe_theory.py            # Theory class (imports MS solver from toe_mcmc_physical)
+    ├── run_mcmc.py              # MCMC with free n_t (Cobaya)
+    ├── analyze.py               # Chain post-processing and verdict
+    ├── evaluate_bk18.py         # Single-point BK18 evaluation
+    ├── evaluate_bk18_map.py     # Sensitivity map (k0 × eps_H scan)
+    ├── joint_analysis.py        # Three-channel joint feasibility
+    └── README.md                # This file
+plots/
     ├── sensitivity_max_deviation.png
     ├── Q_vs_k_by_k0.png
     ├── Q_vs_k_by_epsH.png
@@ -128,6 +125,9 @@ toe_error_evaluation/
     ├── joint_feasibility_map.png
     ├── joint_three_channels.png
     └── ringdown_vs_gamma.png
+docs/
+    ├── ONE_CLAIM_PAPER.md       # One-claim paper, Markdown
+    └── ONE_CLAIM_PAPER.pdf      # One-claim paper, PDF
 ```
 
 ---
@@ -245,7 +245,6 @@ keywords:
              Stress-Energy, Geometry as an Equation of State of Entanglement,
              and Emergent Gauge Symmetries from Branch Algebra},
   year    = {2026},
-  journal = {arXiv preprint},
   note    = {Submitted to JCAP}
 }
 ```
