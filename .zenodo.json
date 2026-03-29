@@ -1,0 +1,35 @@
+{
+  "title": "toe-decoherence-validation: Empirical Validation of the ToE Consistency Relation",
+  "description": "Analysis code and reproducibility pipeline for empirical validation of the Theory of Everything (ToE) consistency relation Q(k) = c_s*/(1+2*nbar_k) using BICEP/Keck 2018 + Planck 2018 + BAO public MCMC chains. Includes Mukhanov-Sasaki solver, three-channel joint analysis (consistency ratio, ring-down, f_NL suppression), sensitivity maps, and one-claim paper.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Marozau, Raman",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0000-0241-1135"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "cosmology",
+    "theory of everything",
+    "decoherence",
+    "entanglement",
+    "consistency relation",
+    "BK18",
+    "Planck 2018",
+    "Mukhanov-Sasaki",
+    "Bogoliubov",
+    "CMB B-modes",
+    "ring-down",
+    "non-Gaussianity"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://lambda.gsfc.nasa.gov/product/bicepkeck/",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset"
+    }
+  ],
+  "version": "1.0.0"
+}

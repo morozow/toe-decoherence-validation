@@ -1,0 +1,9 @@
+include LICENSE
+include LICENSE-docs
+include README.md
+include CITATION.cff
+include pyproject.toml
+recursive-include src/toe_decoherence_validation *.py
+recursive-include src/toe_decoherence_validation/plots *.png
+include docs/EVALUATION_REPORT.md
+include docs/ONE_CLAIM_PAPER.md
