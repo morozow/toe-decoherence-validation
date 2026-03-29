@@ -2,7 +2,7 @@
 
 [![Code License: Apache-2.0](https://img.shields.io/badge/Code%20License-Apache%202.0-blue.svg)](LICENSE)
 [![Docs License: CC BY 4.0](https://img.shields.io/badge/Docs%20License-CC%20BY%204.0-lightgrey.svg)](LICENSE-docs)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19313505.svg)](https://doi.org/10.5281/zenodo.19313505)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
 
 Empirical validation framework for a Theory of Everything (ToE) based on internal decoherence, entanglement-sourced stress-energy, geometry as an equation of state of entanglement, and emergent gauge symmetries from branch algebra.
@@ -208,7 +208,7 @@ authors:
     affiliation: "Independent Researcher"
 repository-code: "https://github.com/morozow/toe-decoherence-validation"
 license: "Apache-2.0"
-doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.19313505"
 version: "v1.0.0"
 date-released: "2026-03-28"
 keywords:
@@ -231,7 +231,7 @@ keywords:
   year         = {2026},
   version      = {v1.0.0},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.XXXXXXX},
+  doi          = {10.5281/zenodo.19313505},
   url          = {https://github.com/morozow/toe-decoherence-validation}
 }
 ```
