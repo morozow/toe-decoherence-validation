@@ -1,4 +1,4 @@
-# toe-decoherence-validation
+# Theory of Everything Decoherence Validation: Empirical Validation of the ToE Consistency Relation
 
 [![Code License: Apache-2.0](https://img.shields.io/badge/Code%20License-Apache%202.0-blue.svg)](LICENSE)
 [![Docs License: CC BY 4.0](https://img.shields.io/badge/Docs%20License-CC%20BY%204.0-lightgrey.svg)](LICENSE-docs)
