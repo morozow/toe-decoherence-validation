@@ -8,7 +8,7 @@
 Empirical validation framework for a Theory of Everything (ToE) based on internal decoherence, entanglement-sourced stress-energy, geometry as an equation of state of entanglement, and emergent gauge symmetries from branch algebra.
 
 **Author:** Raman Marozau · [ORCID: 0009-0000-0241-1135](https://orcid.org/0009-0000-0241-1135) · Independent Researcher \
-**Manuscript:** *A Theory of Everything from Internal Decoherence, Entanglement-Sourced Stress-Energy, Geometry as an Equation of State of Entanglement, and Emergent Gauge Symmetries from Branch Algebra*
+**Manuscript:** *A Theory of Everything from Internal Decoherence, Entanglement-Sourced Stress-Energy, Geometry as an Equation of State of Entanglement, and Emergent Gauge Symmetries from Branch Algebra* \
 **Repository scope:** BK18/Planck/BAO-driven inference and three-channel consistency validation.
 
 ---
