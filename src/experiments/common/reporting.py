@@ -7,7 +7,7 @@ consistent output files across all 18 experiments:
   - data/parameters.json — machine-readable parameters and metrics
   - data/*.csv    — numerical data arrays
 
-Reference: sec13; Requirements 18.2, 18.3, 18.4
+Reference: sec13
 """
 
 import csv
