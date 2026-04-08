@@ -10,8 +10,8 @@ authors:
 repository-code: "https://github.com/morozow/toe-decoherence-validation"
 license: "Apache-2.0"
 doi: "10.5281/zenodo.19313505"
-version: "v1.0.0"
-date-released: "2026-03-28"
+version: "v1.1.0"
+date-released: "2026-04-08"
 keywords:
   - cosmology
   - theory of everything
@@ -23,3 +23,7 @@ keywords:
   - Mukhanov-Sasaki
   - Bogoliubov
   - ring-down
+  - conservation law
+  - ghost-freedom
+  - emergent gravity
+  - claim validation

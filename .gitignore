@@ -31,3 +31,8 @@ tmp/
 
 # Cobaya packages
 .cobaya_packages/
+
+# Experiment outputs (regenerable)
+# Keep committed data/plots but ignore temp files
+src/experiments/**/tmp/
+src/experiments/**/.cache/
