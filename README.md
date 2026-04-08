@@ -13,9 +13,9 @@ Empirical validation framework for a Theory of Everything (ToE) based on interna
 
 ---
 
-## What's New in v1.1.0
+## What's New in v3.1.0
 
-Version 1.1.0 adds a **Claim Validation Experiment Suite** (`src/experiments/`) — a growing collection of self-contained experiments, each testing a specific falsifiable claim of the theory against real data. The core package (`toe_decoherence_validation`) remains the foundation; experiments build on top of it via a shared physics layer (`experiments/common/`). New experiments will continue to be added in future releases.
+Version 3.1.0 adds a **Claim Validation Experiment Suite** (`src/experiments/`) — a growing collection of self-contained experiments, each testing a specific falsifiable claim of the theory against real data. The core package (`toe_decoherence_validation`) remains the foundation; experiments build on top of it via a shared physics layer (`experiments/common/`). New experiments will continue to be added in future releases.
 
 ---
 
@@ -286,7 +286,7 @@ authors:
 repository-code: "https://github.com/morozow/toe-decoherence-validation"
 license: "Apache-2.0"
 doi: "10.5281/zenodo.19313505"
-version: "v1.1.0"
+version: "v3.1.0"
 date-released: "2026-04-08"
 keywords:
   - cosmology
@@ -306,7 +306,7 @@ keywords:
   author       = {Marozau, Raman},
   title        = {toe-decoherence-validation},
   year         = {2026},
-  version      = {v1.1.0},
+  version      = {v3.1.0},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.19313505},
   url          = {https://github.com/morozow/toe-decoherence-validation}

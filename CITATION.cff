@@ -10,7 +10,7 @@ authors:
 repository-code: "https://github.com/morozow/toe-decoherence-validation"
 license: "Apache-2.0"
 doi: "10.5281/zenodo.19313505"
-version: "v1.1.0"
+version: "v3.1.0"
 date-released: "2026-04-08"
 keywords:
   - cosmology
