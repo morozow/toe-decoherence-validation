@@ -1,0 +1,51 @@
+VERDICT: PASS
+KEY RESULT: P_ζ=2.10e-09, n_s=0.9669, n̄_k_pivot=1.91e-09, H0=67.7
+MANUSCRIPT REF: sec03, eq:consistency; sec13, eq:posteriors
+
+Experiment 06: Primordial Power Spectra
+============================================================
+
+P_ζ(k) = (1+2n̄_k)·A_s·(k/k_*)^(n_s-1)  (sec03)
+
+METHODOLOGY:
+  - run_toe_calculation() for CAMB pipeline (H0, σ₈, C_ℓ)
+  - compute_ms_nbar() for n̄_k from MS solver
+  - load_bk18_chains() for observational posteriors
+
+CAMB PIPELINE:
+  H0 = 67.66 km/s/Mpc
+  σ₈ = nan
+  n̄_k at pivot (CAMB) = 7.117542e-09
+  Q_toe (CAMB) = 0.99999999
+
+MS SOLVER (60 modes):
+  n̄_k range: [8.386414e-10, 2.299078e+00]
+  n̄_k at pivot = 1.909877e-09
+  Occupancy enhancement at pivot = 1.00000000
+
+BK18 CHAINS: loaded
+  n_s = 0.9669 ± 0.0037
+  r = 0.0163 ± 0.0102
+
+POWER SPECTRUM AT PIVOT:
+  P_ζ(k*) = 2.0976e-09
+  n_s (numerical) = 0.9669
+
+PLANCK COMPARISON:
+  n_s: 0.9669 vs 0.965±0.004 → 0.5σ
+  A_s: 2.0976e-09 vs 2.10e-09±3.00e-11 → 0.1σ
+  r: 0.0163 vs < 0.036
+
+  PASS  n̄_k physical — n̄_k ∈ [8.39e-10, 2.30e+00]
+  PASS  H0 consistent with Planck — H0=67.66 (expected 67.4±3.0)
+
+RING-DOWN ANALYSIS (sec03, eq:ringdown):
+  A_eff range: [0.000000e+00, 1.250000e-02]
+  A_eff at pivot = 0.000000e+00
+  Max |δP/P| from ring-down = 1.249630e-02
+
+RING-DOWN FORECAST (sec13, subsec:forecasts):
+  Planck:  σ(P_ζ)/P_ζ = 2% → max SNR = 0.6250
+  CMB-S4:  σ(P_ζ)/P_ζ = 0.1% → max SNR = 12.5000
+  Ideal:   σ(P_ζ)/P_ζ = 0.01% → max SNR = 125.0000
+  Ring-down amplitude A_eff ~ O(ε_H) = O(0.01)

@@ -1,0 +1,50 @@
+VERDICT: PASS
+KEY RESULT: Q_toe=1.000000, |ΔQ|=2.51e-09, n̄_k_pivot=1.26e-09, r=0.0163
+MANUSCRIPT REF: sec03, eq:consistency; sec07; sec13
+
+Experiment 03: Generalized Tensor-Scalar Consistency Relation
+============================================================
+
+eq:consistency (sec03): r/(-8 n_t) = c_s*/(1+2 n̄_k)
+
+METHODOLOGY:
+  - BK18+Planck+BAO chains loaded via load_bk18_chains()
+  - Full ToE evaluation via evaluate_bk18() on REAL data
+  - n̄_k computed via MS solver (Bogoliubov matching)
+  - Q(k) = c_s*/(1+2n̄_k) computed from MS solver output
+
+BK18 DATA (2842467 samples, n_eff=6700148):
+  r = 0.016257 ± 0.010154
+  n_t (SI)  = -0.00203218 ± 0.00126926
+  n_t (ToE) = -0.00203218 ± 0.00126926
+  Δn_t      = -5.10969986e-12
+  |Δn_t|/σ  = 0.0000
+
+MS SOLVER RESULTS:
+  n̄_k at pivot (k=0.05) = 1.257195e-09
+  Q_toe at pivot = 1.00000000
+  Q_obs (SI)     = 1.00000000
+  |Q_obs - Q_toe| = 2.51439003e-09
+
+Q(k) PROFILE (fine grid, 40 modes):
+  n̄_k range: [1.896642e-09, 7.361709e-01]
+  Q(k) range: [0.404475, 1.000000]
+
+  PASS  consistency relation — |Q_obs - Q_toe| = 2.51439003e-09 (threshold 0.1)
+
+WHERE ToE EFFECT IS MAXIMAL:
+  k = 0.0005 Mpc⁻¹: n̄_k = 1.5593e-01, Q = 0.7623
+  Deviation from 1: 23.8%
+
+CMB-S4 / LiteBIRD FORECAST (sec13, subsec:forecasts):
+  Fiducial: r = 0.016257, n_t = -0.00203218
+  LiteBIRD: σ(r) = 1.0e-03 → σ(Q) = 0.0615
+  CMB-S4:   σ(r) = 5.0e-04 → σ(Q) = 0.0308
+  At pivot (k=0.05):
+    Signal (1-Q) = 0.000000
+    SNR(LiteBIRD) = 0.00
+    SNR(CMB-S4)   = 0.00
+  At k₀ (k=0.002):
+    Signal (1-Q) = 0.055171
+    SNR(LiteBIRD) = 0.90
+    SNR(CMB-S4)   = 1.79

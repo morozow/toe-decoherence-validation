@@ -1,0 +1,36 @@
+VERDICT: PASS
+KEY RESULT: max|C(N)|=4.15e-11, n̄_k physical=True, H0=67.7
+MANUSCRIPT REF: sec03, eq:wEnt; sec06 (conservation); P3
+
+Experiment 04: Covariant Conservation ∇_μ T^ent_μν = 0
+============================================================
+
+Conservation residual: C(N) = d ln ρ_ent/dN + 3(1+w_ent)
+Reference: sec03, eq:wEnt; sec06 (conservation); P3 (covariance)
+
+PARAMETERS (from TOE_PARAMS):
+  ε      = 0.01
+  ΔN     = 4.0
+  N₀     = -5.0
+  Ω_ent0 = 0.001
+
+Grid: N ∈ [-15.0, 5.0], 400001 points (dN = 5.00e-05)
+
+CONSERVATION RESIDUAL:
+  max|C(N)| (interior) = 4.15e-11
+  max|C(N)| (full)     = 4.95e-11
+  mean|C(N)|           = 7.98e-12
+  Threshold            = 1e-10
+  PASS  conservation law — max|C(N)| = 4.15e-11 (threshold 1e-10)
+
+MS SOLVER (n̄_k physical check):
+  n̄_k range: [1.013371e-09, 3.896602e-01]
+  All positive: True, All finite: True
+  PASS  MS solver physical n̄_k — n̄_k ∈ [1.01e-09, 3.90e-01], positive=True
+
+CAMB BACKGROUND CONSISTENCY:
+  H0 = 67.66 km/s/Mpc (expected 67.4 ± 3.0)
+  σ₈ = nan
+  n̄_k at pivot = 7.117542e-09
+  Q_toe (CAMB) = 0.99999999
+  PASS  CAMB background consistency — H0 = 67.66 km/s/Mpc (expected 67.4 ± 3.0)

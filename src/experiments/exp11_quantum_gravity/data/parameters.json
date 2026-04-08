@@ -1,0 +1,57 @@
+{
+  "experiment": "exp11_quantum_gravity",
+  "category": "rigorous",
+  "verdict": "PASS",
+  "key_result": "κ_EE=0.2153, G_eff match=True, H0=67.7, max|C|=4.1e-11",
+  "manuscript_ref": "sec10 (uniqueness); sec11 (constructive fixing); sec06 (stability)",
+  "parameters": {
+    "source": "SM_CONTENT + TOE_PARAMS + DEFAULT_COBAYA_PARAMS",
+    "heat_kernel": {
+      "kappa_0": 0.011111111111111112,
+      "kappa_half": 0.009722222222222222,
+      "kappa_1": -0.022222222222222223,
+      "kappa_EE": 0.2152777777777778,
+      "kappa_scalar": 0.044444444444444446,
+      "kappa_fermion": 0.4375,
+      "kappa_vector": -0.26666666666666666
+    },
+    "derived": {
+      "ell_c_planck": 0.927960727138337,
+      "ell_c_meters": 1.499821165040973e-35,
+      "G_eff_planck": 1.0,
+      "G_eff_SI": 6.6743e-11,
+      "sigma_EE": 0.25,
+      "Lambda_eff_over_H0sq": 2.0541
+    },
+    "sm_central_charges": {
+      "a_SM": 2.765277777777778,
+      "c_SM": 3.4833333333333334,
+      "alpha2_slope": -0.010158504089140636,
+      "alpha3_slope": 0.02592837234180658
+    },
+    "camb": {
+      "H0": 67.65957623733938,
+      "sigma8": NaN
+    },
+    "ms_solver": {
+      "nbar_min": 1.0133709286147798e-09,
+      "nbar_max": 0.3896602052358141,
+      "nbar_physical": true
+    },
+    "conservation": {
+      "max_residual": 4.1461500899231396e-11,
+      "mean_residual": 7.976245952361171e-12,
+      "threshold": 1e-10,
+      "passed": true
+    }
+  },
+  "metrics": {
+    "G_eff_match": true,
+    "mep_pass": true,
+    "H0_consistent": true,
+    "conservation_pass": true,
+    "nbar_physical": true,
+    "c_T_pass": true,
+    "all_pass": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "parameter_source": "validation/fitted_params.py",
+  "fit_method": "Grid search to Planck 2018",
+  "fit_chi2": 0.36,
+  "fitted_params": {
+    "Omega_ent0": 0.067,
+    "epsilon": 0.15,
+    "DeltaN": 10.0,
+    "N0": -8.0,
+    "n0": 0.27,
+    "k0_Mpc": 0.04
+  },
+  "planck_2018": {
+    "n_s": {
+      "value": 0.9649,
+      "sigma": 0.0042,
+      "source": "Planck 2018 Table 2 (TT,TE,EE+lowE+lensing)"
+    },
+    "A_s": {
+      "value": 2.1e-09,
+      "sigma": 3e-11,
+      "source": "Derived from ln(10^10 A_s) = 3.044 \u00b1 0.014"
+    },
+    "r": {
+      "upper_limit_95CL": 0.036,
+      "source": "Planck 2018 + BICEP/Keck 2018"
+    }
+  },
+  "toe_predictions": {
+    "n_s": 0.9626789148539456,
+    "A_s": 2.084189120941415e-09,
+    "r": 0.0021592507856327326,
+    "n_t": -0.00039635962046692257
+  },
+  "tensions_sigma": {
+    "n_s": 0.5288297966796064,
+    "A_s": 0.527029301952843
+  },
+  "consistency_relation": {
+    "LHS_r_over_8nt": 0.6809632825012155,
+    "RHS_cs_over_1plus2nbar": 0.6809632825012155,
+    "deviation": 0.0
+  },
+  "verdict": {
+    "n_s_consistent": true,
+    "A_s_consistent": true,
+    "r_below_limit": true,
+    "overall_consistent": true
+  }
+}
