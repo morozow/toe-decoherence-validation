@@ -1,5 +1,5 @@
 VERDICT: PASS
-KEY RESULT: P_ζ=2.10e-09, n_s=0.9669, n̄_k_pivot=1.91e-09, H0=67.7
+KEY RESULT: P_ζ=2.10e-09, n_s=0.9650, n̄_k_pivot=1.91e-09, H0=67.7
 MANUSCRIPT REF: sec03, eq:consistency; sec13, eq:posteriors
 
 Experiment 06: Primordial Power Spectra
@@ -23,18 +23,18 @@ MS SOLVER (60 modes):
   n̄_k at pivot = 1.909877e-09
   Occupancy enhancement at pivot = 1.00000000
 
-BK18 CHAINS: loaded
-  n_s = 0.9669 ± 0.0037
-  r = 0.0163 ± 0.0102
+BK18 CHAINS: not found
+  n_s = 0.9650 ± 0.0040
+  r = 0.0100 ± 0.0100
 
 POWER SPECTRUM AT PIVOT:
-  P_ζ(k*) = 2.0976e-09
-  n_s (numerical) = 0.9669
+  P_ζ(k*) = 2.0974e-09
+  n_s (numerical) = 0.9650
 
 PLANCK COMPARISON:
-  n_s: 0.9669 vs 0.965±0.004 → 0.5σ
-  A_s: 2.0976e-09 vs 2.10e-09±3.00e-11 → 0.1σ
-  r: 0.0163 vs < 0.036
+  n_s: 0.9650 vs 0.965±0.004 → 0.0σ
+  A_s: 2.0974e-09 vs 2.10e-09±3.00e-11 → 0.1σ
+  r: 0.0100 vs < 0.036
 
   PASS  n̄_k physical — n̄_k ∈ [8.39e-10, 2.30e+00]
   PASS  H0 consistent with Planck — H0=67.66 (expected 67.4±3.0)

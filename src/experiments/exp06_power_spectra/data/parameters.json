@@ -2,7 +2,7 @@
   "experiment": "exp06_power_spectra",
   "category": "rigorous",
   "verdict": "PASS",
-  "key_result": "P_ζ=2.10e-09, n_s=0.9669, n̄_k_pivot=1.91e-09, H0=67.7",
+  "key_result": "P_ζ=2.10e-09, n_s=0.9650, n̄_k_pivot=1.91e-09, H0=67.7",
   "manuscript_ref": "sec03, eq:consistency; sec13, eq:posteriors",
   "parameters": {
     "source": "DEFAULT_COBAYA_PARAMS + TOE_PARAMS + BK18 chains",
@@ -19,20 +19,20 @@
       "nbar_physical": true
     },
     "power_spectrum": {
-      "P_pivot": 2.0975556031670866e-09,
-      "ns_at_pivot": 0.9669079272096326,
+      "P_pivot": 2.0974147521812496e-09,
+      "ns_at_pivot": 0.9649999317277462,
       "A_s_used": 2.1e-09,
-      "ns_used": 0.9669079954818909
+      "ns_used": 0.965
     },
     "bk18_chains": {
-      "loaded": true,
-      "n_samples": 2842467,
-      "ns_chain": 0.9669079954818909,
-      "r_chain": 0.016257461416583272
+      "loaded": false,
+      "n_samples": 0,
+      "ns_chain": 0.965,
+      "r_chain": 0.01
     },
     "planck_comparison": {
-      "ns_tension_sigma": 0.47698180240815513,
-      "As_tension_sigma": 0.08147989443045395,
+      "ns_tension_sigma": 1.7068063434821923e-05,
+      "As_tension_sigma": 0.08617492729168663,
       "r_below_limit": true
     },
     "ringdown_forecast": {
