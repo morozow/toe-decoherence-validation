@@ -1,0 +1,50 @@
+VERDICT: PASS
+KEY RESULT: κ_EE=0.2153, G_eff match=True, H0=67.7, max|C|=4.1e-11
+MANUSCRIPT REF: sec10 (uniqueness); sec11 (constructive fixing); sec06 (stability)
+
+Experiment 11: Quantum Gravity / Emergent Geometry
+============================================================
+
+1/(4 G_eff) = σ_EE = κ_EE(ρ_SM) · ℓ_c⁻²  (sec10, sec11)
+
+METHODOLOGY:
+  - κ_EE computed from SM_CONTENT heat-kernel coefficients
+  - compute_ms_nbar() for physical n̄_k verification
+  - run_toe_calculation() for H0 from CAMB
+  - conservation_residual() for ∇_μ T^ent = 0
+
+SM FIELD CONTENT (sec11):
+  N_s=4, N_w=45, N_v=12
+  κ_EE(ρ_SM) = 0.215278
+  Scalar: 0.044444, Fermion: 0.437500, Vector: -0.266667
+
+DERIVED QUANTITIES:
+  ℓ_c = 0.927961 ℓ_Pl = 1.4998e-35 m
+  G_eff = 1.000000 (Planck units)
+  G_eff (SI) = 6.67430e-11
+  G_N   (SI) = 6.67430e-11
+  σ_EE = 0.250000
+  Λ_eff/H₀² = 2.0541
+
+SM CENTRAL CHARGES (sec11):
+  a_SM = 2.7653, c_SM = 3.4833
+  α₂ slope = -0.01016, α₃ slope = 0.02593
+
+CAMB PIPELINE:
+  H0 = 67.66 km/s/Mpc
+  σ₈ = nan
+
+MS SOLVER:
+  n̄_k range: [1.013371e-09, 3.896602e-01]
+  Physical: True
+
+CONSERVATION:
+  max|C(N)| = 4.15e-11 (threshold 1e-10)
+
+CHECKS:
+  PASS  G_eff from entanglement — G_eff=6.67430e-11, G_N=6.67430e-11
+  PASS  MEP: σ_EE = 1/(4G_eff) — |residual| = 0.00e+00
+  PASS  H0 consistent — H0=67.66 (expected 67.4±3.0)
+  PASS  conservation ∇_μ T^ent = 0 — max|C(N)| = 4.15e-11
+  PASS  n̄_k physical (MS solver) — n̄_k ∈ [1.01e-09, 3.90e-01]
+  PASS  c_T = 1 (GW170817) — |c_T - 1| = 0.00e+00

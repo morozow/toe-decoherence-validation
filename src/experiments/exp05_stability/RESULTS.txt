@@ -1,0 +1,40 @@
+VERDICT: PASS
+KEY RESULT: ghost-free=True, z²>0=True, n̄_k physical=True, H0=67.7
+MANUSCRIPT REF: sec06 (stability); sec10 (ghost-freedom); sec11 (SM charges); sec13
+
+Experiment 05: Stability and Ghost-Freedom
+============================================================
+
+Ghost-freedom: α₃ ≥ 0 AND α₂ + α₃/3 ≥ 0 (sec10)
+Stability: z² = 2a²ε_H/c_s² > 0 (sec06)
+
+METHODOLOGY:
+  - run_toe_calculation(DEFAULT_COBAYA_PARAMS) for ghost check
+  - Ghost-violating params tested (α₂=-1.0, α₃=-0.5)
+  - compute_ms_nbar() for physical n̄_k verification
+  - stability_z2() for z² profile
+
+GHOST-FREEDOM (sec10):
+  DEFAULT: α₂=-0.3, α₃=1.0, α₂+α₃/3=0.0333
+  PASS  ghost-free (DEFAULT_COBAYA_PARAMS) — α₂=-0.3, α₃=1.0, α₂+α₃/3=0.0333
+  PASS  ghost-violating params rejected — α₂=-1.0, α₃=-0.5 → calculate() returned None
+  PLANCK_POSTERIORS: α₂=-0.34±0.2, α₃=0.98±0.25
+  Posterior α₂+α₃/3 = -0.0133
+
+STABILITY (sec06):
+  z² range: [8.496709e-20, 1.777222e+05]
+  PASS  stability z² > 0 — min(z²) = 8.496709e-20
+
+MS SOLVER:
+  n̄_k range: [1.013371e-09, 3.896602e-01]
+  PASS  MS solver physical n̄_k — n̄_k ∈ [1.01e-09, 3.90e-01]
+
+CAMB PIPELINE:
+  H0 = 67.66 km/s/Mpc
+  σ₈ = nan
+  PASS  CAMB H0 consistent — H0=67.66 (expected 67.4±3.0)
+
+SM CENTRAL CHARGES (sec11):
+  a_SM = 2.765278 (1991/720)
+  c_SM = 3.483333 (209/60)
+  α₂ slope = -0.01016, α₃ slope = 0.02593

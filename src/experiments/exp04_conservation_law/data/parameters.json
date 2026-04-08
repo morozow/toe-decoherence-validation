@@ -1,0 +1,43 @@
+{
+  "experiment": "exp04_conservation_law",
+  "category": "rigorous",
+  "verdict": "PASS",
+  "key_result": "max|C(N)|=4.15e-11, n̄_k physical=True, H0=67.7",
+  "manuscript_ref": "sec03, eq:wEnt; sec06 (conservation); P3",
+  "parameters": {
+    "source": "TOE_PARAMS + DEFAULT_COBAYA_PARAMS",
+    "entanglement_fluid": {
+      "epsilon": 0.01,
+      "DeltaN": 4.0,
+      "N0": -5.0,
+      "Omega_ent0": 0.001
+    },
+    "conservation": {
+      "max_residual_interior": 4.1461500899231396e-11,
+      "max_residual_full": 4.94868590550368e-11,
+      "mean_residual": 7.976245952361171e-12,
+      "threshold": 1e-10,
+      "passed": true
+    },
+    "ms_solver": {
+      "nbar_min": 1.0133709286147798e-09,
+      "nbar_max": 0.3896602052358141,
+      "all_positive": true,
+      "all_finite": true,
+      "physical": true
+    },
+    "camb_background": {
+      "H0": 67.65957623733938,
+      "sigma8": NaN,
+      "nbar_pivot": 7.117542426638592e-09,
+      "Q_toe": 0.9999999857649153,
+      "consistent": true
+    }
+  },
+  "metrics": {
+    "conservation_passed": true,
+    "nbar_physical": true,
+    "H0_consistent": true,
+    "all_pass": true
+  }
+}

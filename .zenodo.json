@@ -1,6 +1,6 @@
 {
   "title": "toe-decoherence-validation: Empirical Validation of the ToE Consistency Relation",
-  "description": "Analysis code and reproducibility pipeline for empirical validation of the Theory of Everything (ToE) consistency relation Q(k) = c_s*/(1+2*nbar_k) using BICEP/Keck 2018 + Planck 2018 + BAO public MCMC chains. Includes Mukhanov-Sasaki solver, three-channel joint analysis (consistency ratio, ring-down, f_NL suppression), sensitivity maps, and one-claim paper.",
+  "description": "Analysis code and reproducibility pipeline for empirical validation of the Theory of Everything (ToE) consistency relation Q(k) = c_s*/(1+2*nbar_k) using BICEP/Keck 2018 + Planck 2018 + BAO public MCMC chains. Includes Mukhanov-Sasaki solver, three-channel joint analysis (consistency ratio, ring-down, f_NL suppression), sensitivity maps, one-claim paper, and a growing suite of per-claim validation experiments (conservation law, ghost-freedom stability, power spectra ring-down, emergent gravity).",
   "upload_type": "software",
   "creators": [
     {
@@ -22,7 +22,11 @@
     "Bogoliubov",
     "CMB B-modes",
     "ring-down",
-    "non-Gaussianity"
+    "non-Gaussianity",
+    "conservation law",
+    "ghost-freedom",
+    "emergent gravity",
+    "claim validation"
   ],
   "related_identifiers": [
     {
@@ -31,5 +35,5 @@
       "resource_type": "dataset"
     }
   ],
-  "version": "1.0.0"
+  "version": "3.1.0"
 }

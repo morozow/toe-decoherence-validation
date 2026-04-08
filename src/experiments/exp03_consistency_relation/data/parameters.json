@@ -1,0 +1,51 @@
+{
+  "experiment": "exp03_consistency_relation",
+  "category": "rigorous",
+  "verdict": "PASS",
+  "key_result": "Q_toe=1.000000, |ΔQ|=2.51e-09, n̄_k_pivot=1.26e-09, r=0.0163",
+  "manuscript_ref": "sec03, eq:consistency; sec07; sec13",
+  "parameters": {
+    "source": "BK18+Planck+BAO chains + TOE_PARAMS",
+    "toe_params": {
+      "k0": 0.002,
+      "eps_H": 0.01,
+      "eta_H": 0.005,
+      "s_cs": 0.0,
+      "c_s_star": 1.0,
+      "Gamma_over_H": 5.0
+    },
+    "bk18_data": {
+      "n_samples": 2842467,
+      "n_effective": 6700148.0,
+      "r_mean": 0.016257461416583272,
+      "r_std": 0.010154118755414351
+    },
+    "consistency_relation": {
+      "Q_obs_si": 1.0,
+      "Q_toe_pivot": 0.99999999748561,
+      "Q_deviation": 2.514390029517699e-09,
+      "nbar_k_pivot": 1.2571950376609948e-09,
+      "nt_si_mean": -0.002032182677072909,
+      "nt_toe_mean": -0.002032182682182609,
+      "delta_nt_mean": -5.109699861473928e-12,
+      "delta_nt_over_sigma": 4.025716054383822e-09
+    },
+    "forecast": {
+      "sigma_r_litebird": 0.001,
+      "sigma_r_cmbs4": 0.0005,
+      "sigma_Q_litebird": 0.06151021825461381,
+      "sigma_Q_cmbs4": 0.030755109127306904,
+      "signal_pivot": 1.2460928400237492e-08,
+      "snr_pivot_litebird": 2.0258306268166773e-07,
+      "snr_pivot_cmbs4": 4.0516612536333546e-07,
+      "signal_k0": 0.05517104471230316,
+      "snr_k0_litebird": 0.8969411307228592,
+      "snr_k0_cmbs4": 1.7938822614457184
+    }
+  },
+  "metrics": {
+    "Q_deviation": 2.514390029517699e-09,
+    "threshold": 0.1,
+    "passed": true
+  }
+}

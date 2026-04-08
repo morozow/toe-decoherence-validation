@@ -1,0 +1,32 @@
+{
+  "toe_predictions": {
+    "n_s": 1.0622238803146349,
+    "A_s": 2.053288339492785e-09,
+    "r": 0.002472607047054072
+  },
+  "planck_constraints": {
+    "n_s": {
+      "value": 0.9649,
+      "sigma": 0.0042
+    },
+    "A_s": {
+      "value": 2.1e-09,
+      "sigma": 3e-11
+    },
+    "r": {
+      "upper_limit_95CL": 0.036
+    }
+  },
+  "tensions_sigma": {
+    "n_s": 23.172352455865454,
+    "A_s": 1.5570553502405082,
+    "r": "N/A (upper limit)"
+  },
+  "consistent_3sigma": {
+    "n_s": false,
+    "A_s": true,
+    "r": true
+  },
+  "overall_consistent": false,
+  "citation": "Planck Collaboration, A&A 641, A6 (2020), arXiv:1807.06209"
+}

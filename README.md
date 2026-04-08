@@ -9,7 +9,13 @@ Empirical validation framework for a Theory of Everything (ToE) based on interna
 
 **Author:** Raman Marozau · [ORCID: 0009-0000-0241-1135](https://orcid.org/0009-0000-0241-1135) · Independent Researcher \
 **Manuscript:** *A Theory of Everything from Internal Decoherence, Entanglement-Sourced Stress-Energy, Geometry as an Equation of State of Entanglement, and Emergent Gauge Symmetries from Branch Algebra* \
-**Repository scope:** BK18/Planck/BAO-driven inference and three-channel consistency validation.
+**Repository scope:** BK18/Planck/BAO-driven inference, three-channel consistency validation, and per-claim experimental verification.
+
+---
+
+## What's New in v3.1.0
+
+Version 3.1.0 adds a **Claim Validation Experiment Suite** (`src/experiments/`) — a growing collection of self-contained experiments, each testing a specific falsifiable claim of the theory against real data. The core package (`toe_decoherence_validation`) remains the foundation; experiments build on top of it via a shared physics layer (`experiments/common/`). New experiments will continue to be added in future releases.
 
 ---
 
@@ -33,11 +39,11 @@ The repository is intended for transparent verification, independent reruns, and
 
 Standard single-field slow-roll inflation predicts the tensor consistency relation:
 
-$$Q \equiv \frac{r}{-8\,n_t} = 1$$
+$Q \equiv \frac{r}{-8\,n_t} = 1$
 
 The ToE predicts a scale-dependent modification due to decoherence-induced occupancy $\bar{n}_k$:
 
-$$Q(k) = \frac{c_s^\ast}{1 + 2\bar{n}_k(k)}$$
+$Q(k) = \frac{c_s^\ast}{1 + 2\bar{n}_k(k)}$
 
 where $\bar{n}_k = |\beta_k|^2$ is the Bogoliubov particle number from matching at the decoherence time $\eta_0 = -1/k_0$.
 
@@ -89,7 +95,7 @@ This archive contains public MCMC posterior chains from the joint analysis of BI
 
 Source: [NASA LAMBDA — BICEP/Keck 2018 Data Products](https://lambda.gsfc.nasa.gov/product/bicepkeck/)
 
-### Step 1–3: Run analysis
+### Step 1–3: Run core analysis
 
 ```bash
 # Via entry points (after pip install -e .)
@@ -103,20 +109,73 @@ python -m toe_decoherence_validation.evaluate_bk18_map
 python -m toe_decoherence_validation.joint_analysis
 ```
 
+### Step 4: Run claim validation experiments
+
+```bash
+# Via entry points
+toe-exp03    # Consistency relation Q(k)
+toe-exp04    # Conservation law ∇_μ T^ent = 0
+toe-exp05    # Ghost-freedom / stability
+toe-exp06    # Power spectra & ring-down
+toe-exp11    # Emergent gravity from entanglement
+
+# Or directly
+python src/experiments/exp03_consistency_relation/run_experiment.py
+python src/experiments/exp04_conservation_law/run_experiment.py
+python src/experiments/exp05_stability/run_experiment.py
+python src/experiments/exp06_power_spectra/run_experiment.py
+python src/experiments/exp11_quantum_gravity/run_experiment.py
+```
+
+Each experiment produces `RESULTS.txt`, data CSVs, and plots in its own directory.
+
 ---
 
 ## Repository Structure
 
+### Core package (primary)
+
 ```
-src/toe_decoherence_validation
+src/toe_decoherence_validation/
     ├── __init__.py
-    ├── toe_theory.py            # Theory class (imports MS solver from toe_mcmc_physical)
+    ├── toe_theory.py            # Theory class (MS solver + Bogoliubov matching)
+    ├── mukhanov_sasaki.py       # Mukhanov-Sasaki ODE solver
     ├── run_mcmc.py              # MCMC with free n_t (Cobaya)
     ├── analyze.py               # Chain post-processing and verdict
     ├── evaluate_bk18.py         # Single-point BK18 evaluation
     ├── evaluate_bk18_map.py     # Sensitivity map (k0 × eps_H scan)
-    ├── joint_analysis.py        # Three-channel joint feasibility
-    └── README.md                # This file
+    └── joint_analysis.py        # Three-channel joint feasibility
+```
+
+### Claim validation experiments (growing suite)
+
+```
+src/experiments/
+    ├── common/                  # Shared physics layer (toe_physics, reporting, params)
+    ├── exp03_consistency_relation/   # Claim: Q(k) = c_s*/(1+2n̄_k)
+    ├── exp04_conservation_law/       # Claim: ∇_μ T^ent_μν = 0
+    ├── exp05_stability/              # Claim: ghost-freedom & z² > 0
+    ├── exp06_power_spectra/          # Claim: ring-down oscillations in P_ζ(k)
+    └── exp11_quantum_gravity/        # Claim: 1/(4G_eff) = σ_EE = κ_EE · ℓ_c⁻²
+```
+
+Each experiment is self-contained with `run_experiment.py`, `data/`, `plots/`, and `RESULTS.txt`. New experiments will be added as additional claims are tested.
+
+### Documentation
+
+```
+docs/
+    ├── ONE_CLAIM_PAPER.md / .pdf         # One-claim paper
+    ├── CLAIM_exp03_consistency_relation   # Per-experiment claim documents
+    ├── CLAIM_exp04_conservation
+    ├── CLAIM_exp05_ghost_freedom
+    ├── CLAIM_exp06_ring_down
+    └── CLAIM_exp11_emergent_gravity
+```
+
+### Plots (core analysis)
+
+```
 plots/
     ├── sensitivity_max_deviation.png
     ├── Q_vs_k_by_k0.png
@@ -125,10 +184,28 @@ plots/
     ├── joint_feasibility_map.png
     ├── joint_three_channels.png
     └── ringdown_vs_gamma.png
-docs/
-    ├── ONE_CLAIM_PAPER.md       # One-claim paper, Markdown
-    └── ONE_CLAIM_PAPER.pdf      # One-claim paper, PDF
 ```
+
+---
+
+## Claim Validation Experiments
+
+The `src/experiments/` suite tests individual falsifiable claims of the theory. Each experiment:
+
+- Uses the shared physics layer (`experiments/common/toe_physics`) — zero local formulas
+- Loads real BK18+Planck+BAO data or runs the MS solver with canonical parameters
+- Produces a PASS/FAIL verdict with quantitative thresholds
+- Generates reproducible data files and plots
+
+| Experiment | Claim |
+|---|---|---|
+| `exp03` | Generalized consistency relation $Q(k) < 1$ |
+| `exp04` | Entanglement stress-energy conservation $\nabla_\mu T^{\text{ent}}_{\mu\nu} = 0$ |
+| `exp05` | Ghost-freedom and stability $z^2 > 0$ |
+| `exp06` | Ring-down oscillations in scalar power spectrum |
+| `exp11` | Emergent gravity $1/(4G_{\text{eff}}) = \sigma_{EE}$ |
+
+Companion claim documents are in `docs/CLAIM_*.md` and `docs/CLAIM_*.pdf`.
 
 ---
 
@@ -177,16 +254,16 @@ docs/
 
 1. Clone repository and install dependencies
 2. Extract BK18 chains to `/tmp/bk18_chains/`
-3. Run `evaluate_bk18.py` → single-point result
-4. Run `evaluate_bk18_map.py` → sensitivity map + plots
-5. Run `joint_analysis.py` → three-channel feasibility
-6. Compare output with `EVALUATION_REPORT.md` and `plots/`
+3. Run core analysis: `toe-eval-bk18`, `toe-eval-map`, `toe-joint`
+4. Run experiments: `toe-exp03` through `toe-exp11`
+5. Compare output with `RESULTS.txt` in each experiment directory and `plots/`
 
 ### Determinism notes
 
 - MS solver is deterministic (no random seeds)
 - BK18 chain loading is deterministic (weighted statistics)
 - Plots generated via matplotlib with `Agg` backend
+- All experiments produce identical output on re-run
 
 ---
 
@@ -209,8 +286,8 @@ authors:
 repository-code: "https://github.com/morozow/toe-decoherence-validation"
 license: "Apache-2.0"
 doi: "10.5281/zenodo.19313505"
-version: "v1.0.0"
-date-released: "2026-03-28"
+version: "v3.1.0"
+date-released: "2026-04-08"
 keywords:
   - cosmology
   - theory of everything
@@ -229,7 +306,7 @@ keywords:
   author       = {Marozau, Raman},
   title        = {toe-decoherence-validation},
   year         = {2026},
-  version      = {v1.0.0},
+  version      = {v3.1.0},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.19313505},
   url          = {https://github.com/morozow/toe-decoherence-validation}

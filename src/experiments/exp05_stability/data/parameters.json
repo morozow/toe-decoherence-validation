@@ -1,0 +1,50 @@
+{
+  "experiment": "exp05_stability",
+  "category": "rigorous",
+  "verdict": "PASS",
+  "key_result": "ghost-free=True, z²>0=True, n̄_k physical=True, H0=67.7",
+  "manuscript_ref": "sec06 (stability); sec10 (ghost-freedom); sec11 (SM charges); sec13",
+  "parameters": {
+    "source": "DEFAULT_COBAYA_PARAMS + TOE_PARAMS + PLANCK_POSTERIORS",
+    "ghost_freedom": {
+      "alpha2_default": -0.3,
+      "alpha3_default": 1.0,
+      "positivity_default": 0.033333333333333326,
+      "ghost_free_default": true,
+      "ghost_rejected_violating": true,
+      "alpha2_posterior": -0.34,
+      "alpha3_posterior": 0.98,
+      "positivity_posterior": -0.013333333333333364
+    },
+    "stability": {
+      "z2_min": 8.496708510583178e-20,
+      "z2_max": 177722.21041015745,
+      "z2_positive": true,
+      "eps_H": 0.01,
+      "c_s": 1.0
+    },
+    "ms_solver": {
+      "nbar_min": 1.0133709286147798e-09,
+      "nbar_max": 0.3896602052358141,
+      "nbar_physical": true
+    },
+    "sm_central_charges": {
+      "a_SM": 2.7652777777777775,
+      "c_SM": 3.4833333333333334,
+      "alpha2_slope": -0.010158504089140636,
+      "alpha3_slope": 0.02592837234180658
+    },
+    "camb": {
+      "H0": 67.65957623733938,
+      "sigma8": NaN
+    }
+  },
+  "metrics": {
+    "ghost_free": true,
+    "ghost_rejected": true,
+    "z2_positive": true,
+    "nbar_physical": true,
+    "H0_consistent": true,
+    "all_pass": true
+  }
+}

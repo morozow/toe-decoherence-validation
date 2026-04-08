@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "toe-decoherence-validation"
-version = "1.0.0"
-description = "Empirical validation of the Theory of Everything (ToE) consistency relation using BK18+Planck2018+BAO data and three-channel joint analysis."
+version = "3.1.0"
+description = "Empirical validation of the Theory of Everything (ToE) consistency relation using BK18+Planck2018+BAO data, three-channel joint analysis, and a growing suite of per-claim validation experiments."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
@@ -58,7 +58,7 @@ dev = [
 Homepage = "https://github.com/morozow/toe-decoherence-validation"
 Repository = "https://github.com/morozow/toe-decoherence-validation"
 Issues = "https://github.com/morozow/toe-decoherence-validation/issues"
-Documentation = "https://github.com/morozow/toe-decoherence-validation/blob/main/toe_error_evaluation/README.md"
+Documentation = "https://github.com/morozow/toe-decoherence-validation/blob/main/README.md"
 
 [project.scripts]
 toe-eval-bk18 = "toe_decoherence_validation.evaluate_bk18:main"
@@ -66,6 +66,11 @@ toe-eval-map = "toe_decoherence_validation.evaluate_bk18_map:main"
 toe-joint = "toe_decoherence_validation.joint_analysis:main"
 toe-run-mcmc = "toe_decoherence_validation.run_mcmc:main"
 toe-analyze = "toe_decoherence_validation.analyze:main"
+toe-exp03 = "experiments.exp03_consistency_relation.run_experiment:run_experiment"
+toe-exp04 = "experiments.exp04_conservation_law.run_experiment:run_experiment"
+toe-exp05 = "experiments.exp05_stability.run_experiment:run_experiment"
+toe-exp06 = "experiments.exp06_power_spectra.run_experiment:run_experiment"
+toe-exp11 = "experiments.exp11_quantum_gravity.run_experiment:run_experiment"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -76,3 +81,10 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 toe_decoherence_validation = ["plots/*.png"]
+experiments = [
+  "*/data/*.csv",
+  "*/data/*.json",
+  "*/plots/*.png",
+  "*/RESULTS.txt",
+  "*/README.md",
+]

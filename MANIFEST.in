@@ -3,7 +3,14 @@ include LICENSE-docs
 include README.md
 include CITATION.cff
 include pyproject.toml
+include .zenodo.json
+
+# Core package
 recursive-include src/toe_decoherence_validation *.py
 recursive-include src/toe_decoherence_validation/plots *.png
-include docs/EVALUATION_REPORT.md
-include docs/ONE_CLAIM_PAPER.md
+
+# Experiments (claim validation suite)
+recursive-include src/experiments *.py *.csv *.json *.txt *.md *.png
+
+# Documentation
+recursive-include docs *.md *.pdf
