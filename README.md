@@ -1,9 +1,9 @@
 # Theory of Everything Decoherence Validation: Empirical Validation of the ToE Consistency Relation
 
-[![Code License: Apache-2.0](https://img.shields.io/badge/Code%20License-Apache%202.0-blue.svg)](LICENSE)
-[![Docs License: CC BY 4.0](https://img.shields.io/badge/Docs%20License-CC%20BY%204.0-lightgrey.svg)](LICENSE-docs)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19313505.svg)](https://doi.org/10.5281/zenodo.19313505)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey?style=for-the-badge&logo=creativecommons&logoColor=white)](LICENSE-docs)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19313505-blue?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.19313505)
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
 Empirical validation framework for a Theory of Everything (ToE) based on internal decoherence, entanglement-sourced stress-energy, geometry as an equation of state of entanglement, and emergent gauge symmetries from branch algebra.
 
@@ -198,7 +198,7 @@ The `src/experiments/` suite tests individual falsifiable claims of the theory. 
 - Generates reproducible data files and plots
 
 | Experiment | Claim |
-|---|---|---|
+|---|---|
 | `exp03` | Generalized consistency relation $Q(k) < 1$ |
 | `exp04` | Entanglement stress-energy conservation $\nabla_\mu T^{\text{ent}}_{\mu\nu} = 0$ |
 | `exp05` | Ghost-freedom and stability $z^2 > 0$ |
